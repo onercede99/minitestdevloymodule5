@@ -1,0 +1,73 @@
+/* === NỀN TẢNG & RESET === */
+:root {
+  --primary-color: #0d6efd;
+  --light-gray: #f0f2f5;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --text-color: #212529;
+  --header-bg: #f8f9fa;
+  --shadow-color: rgba(0, 0, 0, 0.075);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* === BỐ CỤC CHUNG === */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem 0; /* Thêm khoảng cách trên dưới cho nội dung */
+}
+
+/* === TÙY CHỈNH COMPONENT BOOTSTRAP === */
+
+/* Tùy chỉnh Card để trông hiện đại hơn */
+.card {
+  border: none; /* Bỏ border mặc định */
+  border-radius: 8px !important; /* Bo góc mềm mại hơn */
+  box-shadow: 0 4px 12px var(--shadow-color);
+  overflow: hidden; /* Đảm bảo header cũng được bo góc */
+}
+
+.card-header {
+  background-color: var(--header-bg) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem !important;
+}
+
+.card-body {
+  padding: 1.5rem !important;
+}
+
+/* Tinh chỉnh nút bấm */
+.btn {
+  border-radius: 6px !important;
+}
+
+/* Tinh chỉnh bảng */
+.table {
+  vertical-align: middle; /* Căn giữa nội dung trong ô theo chiều dọc */
+}
+.table thead {
+  background-color: var(--header-bg);
+}
